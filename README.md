@@ -121,28 +121,9 @@ pip install transformers==4.40.2 sentence-transformers==2.7.0 faiss-cpu==1.8.0 w
 
 ---
 
-## 6. 一键脚本（可选）
 
-新建 `run.sh`：
 
-```bash
-#!/bin/bash
-echo ">>> Step1 文本分块..."
-python split_chunk.py
-echo ">>> Step2 向量索引..."
-python insert_vector_index.py
-echo ">>> Step3 倒排索引..."
-python insert_tfidf.py
-echo ">>> Step4 知识图谱..."
-python insert_kg_index.py
-echo ">>> Step5 深度问答..."
-python deepsearch.py
-chmod +x run.sh && ./run.sh
-```
-
----
-
-## 7. 自定义问答
+## 6. 自定义问答
 
 修改 `deepsearch.py` 最后一行：
 
